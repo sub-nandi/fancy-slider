@@ -128,8 +128,10 @@ searchBtn.addEventListener('click', function () {
     alert("Please put some value first")
   }
   else {
+    displaySpinner();
     getImages(search.value)
     sliders.length = 0;
+
 
   }
 })
@@ -160,3 +162,10 @@ sliderTime.addEventListener("keypress", function (event) {
 
   }
 })
+
+// spinner------------
+
+function displaySpinner() {
+  let spinner = document.getElementById("spinner");
+  spinner.classList.toggle("d-none");
+}
